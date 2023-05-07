@@ -1,0 +1,50 @@
+.card {
+  border: 1px solid #ddd3d3;
+  padding: 0 20px 20px 20px;
+  margin-bottom: 20px;
+  width: 220px;
+  border-radius: 40px;
+  transition: box-shadow 0.1s ease-in-out, transform 0.1s ease-in-out;
+
+  .top {
+    position: relative;
+    top: 30px;
+  }
+  h5 {
+    font-weight: 400;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  span {
+    text-transform: uppercase;
+    opacity: 0.5;
+    font-size: 12px;
+  }
+  b {
+    font-size: 13px;
+  }
+}
+.card:hover {
+  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+.favorite {
+  position: absolute;
+  cursor: pointer;
+  img {
+    position: relative;
+    top: 20px;
+    left: 5px;
+  }
+}
+
+.button {
+  /*background: #ffffff;*/
+  border: 2px solid greenyellow;
+  box-sizing: border-box;
+  border-radius: 8px;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+}
