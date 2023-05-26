@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/swu-react-sneakers/static/css/main.6d4516b7.css",
+    "main.js": "/swu-react-sneakers/static/js/main.2809d7d2.js",
+    "index.html": "/swu-react-sneakers/index.html",
+    "main.6d4516b7.css.map": "/swu-react-sneakers/static/css/main.6d4516b7.css.map",
+    "main.2809d7d2.js.map": "/swu-react-sneakers/static/js/main.2809d7d2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6d4516b7.css",
+    "static/js/main.2809d7d2.js"
+  ]
+}
