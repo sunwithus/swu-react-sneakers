@@ -11,8 +11,12 @@ function Drawer({ items = [], closeCart, onRemove, opened }) {
 
   const { cartItems, setCartItems, totalPrice } = useCart();
 
-
   const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+  const onCloseCartAndResetOrder = () => {
+    setIsOrderComplete(false);
+    closeCart();
+  }
 
   const onClickOrder = async () => {
     //console.log(items.cartItems);
@@ -42,7 +46,7 @@ function Drawer({ items = [], closeCart, onRemove, opened }) {
       <div className={styles.drawer}>
         <h2 className="d-flex justify-between align-center">
           Корзина
-          <img className="cu-p" height={20} width={20} src="/img/delete.svg" alt="Close" onClick={closeCart} />
+          <img className="cu-p" height={20} width={20} src="img/delete.svg" alt="Close" onClick={onCloseCartAndResetOrder} />
         </h2>
 
         {items.length > 0 ? (
@@ -55,7 +59,7 @@ function Drawer({ items = [], closeCart, onRemove, opened }) {
                     <p>{val.name}</p>
                     <b>{val.price} руб.</b>
                   </div>
-                  <img className="deleteBtn" height={20} width={20} src="/img/delete.svg" alt="Delete" onClick={() => onRemove(val.id)} />
+                  <img className="deleteBtn" height={20} width={20} src="img/delete.svg" alt="Delete" onClick={() => onRemove(val.id)} />
                 </div>
               ))}
             </div>
@@ -75,12 +79,12 @@ function Drawer({ items = [], closeCart, onRemove, opened }) {
               </ul>
               <button disabled={isLoading} type="submit" className="greenBtn" onClick={onClickOrder}>
                 Оформить заказ
-                <img height={20} width={20} src="/img/right-arrow.svg" alt="Arrow" />
+                <img height={20} width={20} src="img/right-arrow.svg" alt="Arrow" />
               </button>
             </div>
           </div>
         ) : (
-          <Info title={isOrderComplete ? 'Заказ выполнен' : 'Корзина пустая'} description={isOrderComplete ? `Ваш заказ № ${orderId} скоро будет передан курьерской доставке` : 'Добавьте хотя бы одну пару кроссовок, чтобы сделать заказ.'} image={isOrderComplete ? '/img/complite-order.webp' : '/img/cart-empty.png'} />
+          <Info title={isOrderComplete ? 'Заказ выполнен' : 'Корзина пустая'} description={isOrderComplete ? `Ваш заказ № ${orderId} скоро будет передан курьерской доставке` : 'Добавьте хотя бы одну пару кроссовок, чтобы сделать заказ.'} image={isOrderComplete ? 'img/complite-order.webp' : 'img/cart-empty.png'} />
         )}
       </div>
     </div>
