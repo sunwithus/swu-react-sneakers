@@ -115,11 +115,11 @@ function App() {
         <Drawer items={cartItems} closeCart={onClickCart} onRemove={onRemoveFromCart} opened={cartOpened} />
         <Header showCart={onClickCart} />
         <Routes>
-          <Route path="favorites" element={<Favorites />} />
+          <Route path="swu-react-sneakers/favorites/" element={<Favorites />} />
 
-          <Route path="orders" element={<Orders />} />
+          <Route path="swu-react-sneakers/orders/" element={<Orders />} />
 
-          <Route path="" element={<Home items={items} cartItems={cartItems} searchValue={searchValue} setSearchValue={setSearchValue} onChangeSearchInput={onChangeSearchInput} onAddToCart={onAddToCart} onAddToFavorite={onAddToFavorite} isLoading={isLoading} onRemoveFromFavorite={onRemoveFromFavorite} />} />
+          <Route path="swu-react-sneakers/" element={<Home items={items} cartItems={cartItems} searchValue={searchValue} setSearchValue={setSearchValue} onChangeSearchInput={onChangeSearchInput} onAddToCart={onAddToCart} onAddToFavorite={onAddToFavorite} isLoading={isLoading} onRemoveFromFavorite={onRemoveFromFavorite} />} />
         </Routes>
       </div>
     </AppContext.Provider>

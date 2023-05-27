@@ -1,5 +1,6 @@
 {
-  "name": "react-sneakers",
+  "name": "swu-react-sneakers",
+  "homepage": "https://sunwithus.github.io/swu-react-sneakers",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
