@@ -4,6 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 
 import Header from './components/Header';
 import Drawer from './components/Drawer';
+import Slider from './components/Slider';
 
 import Home from './pages/Home';
 import Favorites from './pages/Favorites';
@@ -113,7 +114,9 @@ function App() {
     <AppContext.Provider value={{ items, cartItems, favorites, isItemAdded, onAddToFavorite, onAddToCart, setCartOpened, setCartItems }}>
       <div className="wrapper clear">
         <Drawer items={cartItems} closeCart={onClickCart} onRemove={onRemoveFromCart} opened={cartOpened} />
+
         <Header showCart={onClickCart} />
+        <Slider />
         <Routes>
           <Route path="swu-react-sneakers/favorites/" element={<Favorites />} />
 

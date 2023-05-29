@@ -5,6 +5,8 @@ import { useCart } from '../hooks/useCart';
 
 function Header(props) {
   const { totalPrice } = useCart();
+  const PATH = 'swu-react-sneakers/';
+  //const PATH = '';
 
   return (
     <header className="d-flex justify-between align-center p-40">
@@ -24,12 +26,12 @@ function Header(props) {
           <span>{totalPrice} руб.</span>
         </li>
         <li className="cu-p mr-20 ">
-          <Link to={`swu-react-sneakers/favorites`}>
+          <Link to={`${PATH}favorites`}>
             <img src="img/favorites.jpg" alt="favorites" height={18} width={18} />
           </Link>
         </li>
         <li className="cu-p">
-          <Link to={`swu-react-sneakers/orders`}>
+          <Link to={`${PATH}orders`}>
             <img src="img/user.svg" alt="user" height={18} width={18} />
           </Link>
         </li>
